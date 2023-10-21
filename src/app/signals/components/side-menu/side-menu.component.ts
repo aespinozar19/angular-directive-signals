@@ -19,9 +19,10 @@ export class SideMenuComponent {
   // ];
 
   public menuItems= signal<MenuItem[]>([
-    { title: 'Contador', route: 'counter'},
-    { title: 'Usuario', route: 'user-info'},
-    { title: 'Mutaciones', route: 'properties'},
+    { title: 'Directiva', route: '/products/product'},
+    { title: 'Contador', route: '/signals/counter'},
+    { title: 'Usuario', route: '/signals/user-info'},
+    { title: 'Mutaciones', route: '/signals/properties'},
   ]);
 
 }

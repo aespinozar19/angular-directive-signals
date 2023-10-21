@@ -6,6 +6,7 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 
 import { SharedModule } from '../shared/shared.module';
+import { SignalsModule } from '../signals/signals.module';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
     ProductsRoutingModule,
     ReactiveFormsModule,
     SharedModule,
+    SignalsModule,
   ]
 })
 export class ProductsModule { }

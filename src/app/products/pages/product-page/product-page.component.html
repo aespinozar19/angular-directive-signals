@@ -1,46 +1,61 @@
 
-<h1>Agregar Producto</h1>
-<hr>
 
-<form [formGroup]="myForm" >
-
-  <div class="row g-3 align-items-center mb-3">
-
-    <div class="col-auto">
-      <label>Nombre:</label>
-    </div>
-
-    <div class="col-auto">
-      <input type="text" class="form-control" formControlName="name">
-    </div>
-
-    <div class="col-auto">
-      <!-- <span>Algo de información</span> -->
-      <span customLabel
-        [color]="color"
-        [errors]="myForm.get('name')?.errors ">
-        Texto temporal
-      </span>
-    </div>
-
+<div class="row mt-2">
+  <div class="col-2">
+    <h3>Menú</h3>
+    <hr>
+    <side-menu></side-menu>
   </div>
-  <div class="row">
-    <div class="col">
-      <button (click)="changeColor()"
-        class="btn btn-primary">
-        Cambiar color
-      </button>
+  <div class="col-10">
+    <router-outlet></router-outlet>
+
+
+
+  <h1>Agregar Producto</h1>
+  <hr>
+
+  <form [formGroup]="myForm" >
+
+    <div class="row g-3 align-items-center mb-3">
+
+      <div class="col-auto">
+        <label>Nombre:</label>
+      </div>
+
+      <div class="col-auto">
+        <input type="text" class="form-control" formControlName="name">
+      </div>
+
+      <div class="col-auto">
+        <!-- <span>Algo de información</span> -->
+        <span customLabel
+          [color]="color"
+          [errors]="myForm.get('name')?.errors ">
+          Texto temporal
+        </span>
+      </div>
+
     </div>
-  </div>
+    <div class="row">
+      <div class="col">
+        <button (click)="changeColor()"
+          class="btn btn-primary">
+          Cambiar color
+        </button>
+      </div>
+    </div>
 
-</form>
+  </form>
 
-<pre>
-  {{ myForm.valid | json }}
-  <br>
-  {{ myForm.get('name')?.errors | json }}
-</pre>
+  <pre>
+    {{ myForm.valid | json }}
+    <br>
+    {{ myForm.get('name')?.errors | json }}
+  </pre>
 
-<p>
-  Color: {{ color }}
-</p>
+  <p>
+    Color: {{ color }}
+  </p>
+
+</div>
+</div>
